@@ -1,27 +1,29 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CapitalComponent } from './pages/capital/capital.component';
-import { CountryComponent } from './pages/country/country.component';
-import { RegionComponent } from './pages/region/region.component';
-import { CountryDetailComponent } from './pages/country-detail/country-detail.component';
+import { ByCountryComponent } from './pages/by-country/by-country.component';
+import { ByCapitalComponent } from './pages/by-capital/by-capital.component';
+import { ByRegionComponent } from './pages/by-region/by-region.component';
+import { SeeCountryComponent } from './pages/see-country/see-country.component';
+import { FormsModule } from '@angular/forms';
 
 
 
 @NgModule({
   declarations: [
-    CapitalComponent,
-    CountryComponent,
-    RegionComponent,
-    CountryDetailComponent
+    ByCountryComponent,
+    ByCapitalComponent,
+    ByRegionComponent,
+    SeeCountryComponent
   ],
   exports: [
-    CapitalComponent,
-    CountryComponent,
-    RegionComponent,
-    CountryDetailComponent
+    ByCountryComponent,
+    ByCapitalComponent,
+    ByRegionComponent,
+    SeeCountryComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ]
 })
 export class CountryModule { }

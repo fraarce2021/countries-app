@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-country',
-  templateUrl: './country.component.html',
+  selector: 'app-by-region',
+  templateUrl: './by-region.component.html',
   styles: [
   ]
 })
-export class CountryComponent implements OnInit {
+export class ByRegionComponent implements OnInit {
 
   constructor() { }
 
