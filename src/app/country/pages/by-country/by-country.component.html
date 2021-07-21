@@ -3,41 +3,18 @@
 
 <div class="row">
     <div class="col">
-        <form (ngSubmit)="search()" autocomplete="off">
-            <input [(ngModel)]="inputCountry" type="text" name="inputCountry" placeholder="Search Country..." class="form-control">
-        </form>
+        <app-country-input (onEnter)="search($event)" (onDebounce)="suggestions($event)"></app-country-input>
     </div>
 </div>
 
 <hr>
 
-<div class="alert alert-danger">
-    No results were found
+<div *ngIf="isError" class="alert alert-danger">
+    No results were found "{{inputCountry}}"
 </div>
 
-<div class="row">
+<div *ngIf="countries.length > 0" class="row">
     <div class="col">
-        <table class="table table-hover">
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Flag</th>
-                    <th>Name</th>
-                    <th>Population</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Flag</td>
-                    <td>Name</td>
-                    <td>123123123123</td>
-                    <td>
-                        <a href="country/cri">See...</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <app-country-table [countries]="countries"></app-country-table>
     </div>
 </div>
