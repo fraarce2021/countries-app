@@ -17,4 +17,13 @@ export class CountryService {
     return this.http.get<Country[]>(url);
   }
 
+  searchCapital(dataSearched:string):Observable<Country[]>{
+    const url = `${this.apiUrl}/capital/${dataSearched}`
+    return this.http.get<Country[]>(url);
+  }
+
+  searchCountryByAlpha(id:string):Observable<Country>{
+    const url = `${this.apiUrl}/alpha/${id}`
+    return this.http.get<Country>(url);
+  }
 }

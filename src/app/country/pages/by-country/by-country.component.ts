@@ -28,6 +28,6 @@ export class ByCountryComponent  {
 
   suggestions(term: string){
     this.isError = false;
-console.log(term)
+    console.log(term)
   }
 }
